@@ -11,13 +11,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  border-radius: 7px 7px 7px 7px;
+  border-radius: 8px 8px 8px 8px;
 }
 
 .calculator-window {
+  display: flex;
  width: 400px;
  height: 100px;
+ color: white;
+ justify-content: flex-end;
+ align-items: flex-end;;
+ font-size: 6em;
 
+}
+
+.calculator-window span {
+  margin-right: 10px;
 }
 
 .calculator-buttons {
@@ -33,18 +42,30 @@
 }
 
 .keys {
+  display:flex;
   width:100px;
   height:80px;
   border: 1px solid gray;
   list-style: none;
   color: black;
   background-color: lightgrey;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+}
 
-
+.numbers:hover {
+  background-color: gray;
 }
 
 .operators {
-  background-color: rgb(245,146,63)ç; 
+  background-color: rgb(245,146,63);
+  color: white;
+}
+
+.operators:hover {
+  background-color: rgb(201,121,55);
 }
 
 .oh-button {
@@ -52,6 +73,9 @@
   border-radius: 0px 0px 0px 7px;
 }
 
+.oh-button span  {
+  margin-left: -99px;
+}
 .equal-button {
     border-radius: 0px 0px 7px 0px;
 }
