@@ -57,6 +57,11 @@
 
 .numbers:hover {
   background-color: gray;
+  transition: 500ms;
+}
+
+.numbers:active {
+  background-color: rgb(104,102,102);
 }
 
 .operators {
@@ -66,7 +71,13 @@
 
 .operators:hover {
   background-color: rgb(201,121,55);
+  transition: 500ms;
 }
+
+.operators:active {
+  background-color: rgb(153,92,41);
+}
+
 
 .oh-button {
   width: 202px;
