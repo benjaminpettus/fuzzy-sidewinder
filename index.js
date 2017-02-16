@@ -1,16 +1,21 @@
 var keys = document.getElementsByClassName('keys')
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
+var clear = 0;
 
 for( var i = 0; i < keys.length; i++ ) {
   keys[ i ].onclick = function ( event ) {
-  var input = document.querySelector( '.screen' );
-	var inputVal = input.innerHTML;
 	var btnVal = this.innerHTML;
+	var input = document.querySelector( '.screen' );
+	var inputVal = input.innerHTML;
 
+	if( input.innerHTML == 0 || input == clear ) {
+		input.innerHTML = '';
+		
+	}
 	//clear
 	if( btnVal == 'AC' ) {
-		input.innerHTML = '';
+		input.innerHTML = clear;
 		decimalAdded = false;
 	}
 
