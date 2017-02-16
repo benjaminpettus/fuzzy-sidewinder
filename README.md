@@ -110,10 +110,10 @@ In stage 2 you will be adding `JavaScript` to make the calculator work.
 
 ##### Specs
 
-- [ ] Your `JavaScript` is written in `ES5`
+- [x] Your `JavaScript` is written in `ES5`
 - [ ] Your `JavaScript` follows this [style guide](https://google.github.io/styleguide/jsguide.html)
 - [ ] Your JavaScript defines 1 or less global variables
-- [ ] The Calculator display is not an `<input>`
+- [x] The Calculator display is not an `<input>`
 - [ ] Typing a relevant key at any point is reflected on the calculator
 - [ ] Typing a relevant key causes the corresponding button on the calculator to appear to have been pressed. AKA flashes active
 - [ ] The state of the calculator is not be stored in the `DOM`
