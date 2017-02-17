@@ -44,18 +44,17 @@ sub {
 }
 
 .calculator-window {
-display: flex;
- width: 400px;
- height: 100px;
- color: white;
- justify-content: flex-end;
- align-items: flex-end;;
- font-size: 6em;
-
+  display: flex;
+  width: 400px;
+  height: 100px;
+  color: white;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .calculator-window span {
   margin-right: 10px;
+  font-size: 80px;
 }
 
 .calculator-buttons {
