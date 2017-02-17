@@ -119,6 +119,47 @@ document.onkeydown = function(event) {
 		input.innerHTML += key_press;
 	}
 
+//handling keypress operators
+	if( ( inputVal != '' && operators.indexOf(lastChar) == -1 &&
+	 	key_code == 187 && event.shiftKey) || (key_code == 107) ||
+		(key_code == 61 && event.shiftKey ) ) {
+		document.querySelector('.screen').innerHTML += '+';
+	}
+
+	if( ( inputVal != '' && operators.indexOf(lastChar) == -1 &&
+	 	key_code == 189 && event.shiftKey) || (inputVal != ''
+		&& operators.indexOf(lastChar) == -1 && key_code == 107)) {
+		document.querySelector('.screen').innerHTML += '-';
+	}
+
+	if(( inputVal != '' && operators.indexOf(lastChar) == -1 && key_code == 56 && event.shiftKey) ||
+		(inputVal != '' && operators.indexOf(lastChar) == -1 && key_code == 106)) {
+			document.querySelector('.screen').innerHTML += 'x';
+	}
+
+	if( (inputVal != '' && operators.indexOf(lastChar) == -1 && key_code == 191) ||
+		(inputVal != '' && operators.indexOf(lastChar) == -1 && key_code == 111)) {
+			document.querySelector('.screen').innerHTML += '÷';
+	}
+	 // add percent button
+	// if( (inputVal != '' && operators.indexOf(lastChar) == -1 && key_code == 191) ||
+	// 	(inputVal != '' && operators.indexOf(lastChar) == -1 && key_code == 111)) {
+	// 		document.querySelector('.screen').innerHTML += '%';
+	// }
+
+	if( key_code == 13 || key_code == 187 && event.shiftKey == false) {
+		input.innerHTML = eval(equation);
+		decimalAdded = false;
+	}
+
+
+	if ( key_code == 8 || key_code == 46 ) {
+		input.innerHTML = '';
+		decimalAdded = false;
+	}
+
+
+
 
 
 
