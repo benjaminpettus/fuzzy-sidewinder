@@ -1,4 +1,4 @@
-var keys = document.getElementsByClassName('keys')
+var keys = document.getElementsByTagName('li')
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
 var clear = 0;
@@ -11,8 +11,10 @@ for( var i = 0; i < keys.length; i++ ) {
 
 	if( input.innerHTML == 0 || input == clear ) {
 		input.innerHTML = '';
-		
 	}
+
+
+
 	//clear
 	if( btnVal == 'AC' ) {
 		input.innerHTML = clear;
@@ -70,6 +72,54 @@ for( var i = 0; i < keys.length; i++ ) {
 	else {
 		input.innerHTML += btnVal;
 	}
-		event.preventDefault();
+	event.preventDefault();
 	}
+}
+
+document.onkeydown = function(event) {
+
+	var key_press = String.fromCharCode(event.keyCode);
+	var key_code = event.keyCode;
+	var input = document.querySelector('.screen');
+	var inputVal = input.innerHTML;
+	var btnVal = this.innerHTML;
+	var lastChar = inputVal[inputVal.length - 1];
+	var equation = inputVal;
+
+	equation = equation.replace(/x/g, '*').replace(/÷/g, '/').replace(/\^/g, '**');
+
+	if (key_press == 1) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 2) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 3 || key_code == 32) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 4) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 5) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 6 && event.shiftKey == false) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 7) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 8 && event.shiftKey == false) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 9) {
+		input.innerHTML += key_press;
+	}
+	if (key_press == 0) {
+		input.innerHTML += key_press;
+	}
+
+
+
+
 }
